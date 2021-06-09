@@ -1,5 +1,5 @@
 import React from 'react';
-import { TOKEN_POST, USER_GET, TOKEN_VALIDATE_POST } from './api';
+import { TOKEN_POST, USER_GET, TOKEN_VALIDATE_POST } from './Api';
 import { useNavigate } from 'react-router-dom';
 export const UserContext = React.createContext();
 
@@ -60,6 +60,7 @@ export const UserStorage = ({ children }) => {
           if (!response.ok) throw new Error('Token Invalido');
           await getUser(token);
           const json = await response.json();
+          console.log(json);
         } catch (err) {
           userLogout();
         } finally {
