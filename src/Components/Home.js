@@ -4,7 +4,7 @@ import style from './Home.module.css';
 const Home = () => {
   return (
     <div className={style.home}>
-      <p>home</p>
+      <p>Home</p>
     </div>
   );
 };
